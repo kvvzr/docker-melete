@@ -27,7 +27,8 @@ RUN git clone --depth 1 https://github.com/kvvzr/Melete.git
 RUN cd Melete && pip install -r requirements.txt && \
     python app.py db init && \
     python app.py db migrate && \
-    python app.py db upgrade
+    python app.py db upgrade && \
+    python app.py seed
 
 EXPOSE 8000
 
